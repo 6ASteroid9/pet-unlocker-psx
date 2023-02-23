@@ -1,161 +1,21 @@
--- Gui to Lua
--- Version: 3.2
+local player = game:GetService("Players").LocalPlayer
+local inventory = player.PlayerGui.Inventory.Frame.Main.Pets.Normal
 
--- Instances:
+-- Replace "rbxassetid://your_asset_idhere" with the asset ID of your custom Roblox asset
+local customAssetId = "rbxassetid://12089951494"
 
-local ScreenGui = Instance.new("ScreenGui")
-local Frame = Instance.new("Frame")
-local UICorner = Instance.new("UICorner")
-local Frame_2 = Instance.new("Frame")
-local UICorner_2 = Instance.new("UICorner")
-local TextLabel = Instance.new("TextLabel")
-local Frame_3 = Instance.new("Frame")
-local UICorner_3 = Instance.new("UICorner")
-local Frame_4 = Instance.new("Frame")
-local UICorner_4 = Instance.new("UICorner")
-local TextLabel_2 = Instance.new("TextLabel")
-local UICorner_5 = Instance.new("UICorner")
-local ButtonNext = Instance.new("TextButton")
-local UICorner_6 = Instance.new("UICorner")
-local TextLabel_3 = Instance.new("TextLabel")
-local TextLabel_4 = Instance.new("TextLabel")
-local UICorner_7 = Instance.new("UICorner")
-local TextLabel_5 = Instance.new("TextLabel")
-local UICorner_8 = Instance.new("UICorner")
-local ImageButton = Instance.new("ImageButton")
-local UICorner_9 = Instance.new("UICorner")
-
---Properties:
-
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-Frame.Parent = ScreenGui
-Frame.BackgroundColor3 = Color3.fromRGB(120, 93, 254)
-Frame.Position = UDim2.new(0.384080857, 0, 0.272839516, 0)
-Frame.Size = UDim2.new(0, 662, 0, 402)
-
-UICorner.CornerRadius = UDim.new(0, 4)
-UICorner.Parent = Frame
-
-Frame_2.Parent = Frame
-Frame_2.BackgroundColor3 = Color3.fromRGB(94, 73, 200)
-Frame_2.Position = UDim2.new(0.0392749235, 0, 0.189054728, 0)
-Frame_2.Size = UDim2.new(0, 609, 0, 311)
-
-UICorner_2.Parent = Frame_2
-
-TextLabel.Parent = Frame_2
-TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.BackgroundTransparency = 1.000
-TextLabel.Position = UDim2.new(0.320197046, 0, 0.903536975, 0)
-TextLabel.Size = UDim2.new(0, 270, 0, 30)
-TextLabel.Font = Enum.Font.LuckiestGuy
-TextLabel.Text = "discord.gg/psx-scripts"
-TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.TextSize = 14.000
-
-Frame_3.Parent = Frame_2
-Frame_3.BackgroundColor3 = Color3.fromRGB(120, 93, 254)
-Frame_3.Position = UDim2.new(-0.0262725782, 0, 0, 0)
-Frame_3.Size = UDim2.new(0, 100, 0, 326)
-
-UICorner_3.CornerRadius = UDim.new(0, 4)
-UICorner_3.Parent = Frame_3
-
-Frame_4.Parent = Frame_3
-Frame_4.Active = true
-Frame_4.BackgroundColor3 = Color3.fromRGB(71, 56, 156)
-Frame_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Frame_4.Position = UDim2.new(-0.00960591435, 0, 0.0494151078, 0)
-Frame_4.Size = UDim2.new(0, 89, 0, 51)
-
-UICorner_4.Parent = Frame_4
-
-TextLabel_2.Parent = Frame_4
-TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_2.BackgroundTransparency = 1.000
-TextLabel_2.Position = UDim2.new(0, 0, -0.00619207649, 0)
-TextLabel_2.Size = UDim2.new(0, 89, 0, 54)
-TextLabel_2.Font = Enum.Font.FredokaOne
-TextLabel_2.Text = "MAIN"
-TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_2.TextScaled = true
-TextLabel_2.TextSize = 14.000
-TextLabel_2.TextWrapped = true
-
-UICorner_5.Parent = TextLabel_2
-
-ButtonNext.Name = "ButtonNext"
-ButtonNext.Parent = Frame_2
-ButtonNext.BackgroundColor3 = Color3.fromRGB(74, 58, 161)
-ButtonNext.Position = UDim2.new(0.377668321, 0, 0.405144691, 0)
-ButtonNext.Size = UDim2.new(0, 200, 0, 65)
-ButtonNext.Font = Enum.Font.LuckiestGuy
-ButtonNext.Text = "UNLOCK PETS"
-ButtonNext.TextColor3 = Color3.fromRGB(0, 0, 0)
-ButtonNext.TextScaled = true
-ButtonNext.TextSize = 14.000
-ButtonNext.TextWrapped = true
-ButtonNext.MouseButton1Down:connect(function()
-	loadstring(game:HttpGet("https://pastebin.com/raw/82RVBrYJ",true))()
-end)
-
-UICorner_6.Parent = ButtonNext
-
-TextLabel_3.Parent = Frame_2
-TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_3.BackgroundTransparency = 1.000
-TextLabel_3.Position = UDim2.new(0.377668321, 0, 0.0482315123, 0)
-TextLabel_3.Size = UDim2.new(0, 200, 0, 34)
-TextLabel_3.Font = Enum.Font.LuckiestGuy
-TextLabel_3.Text = "U MUST BE IN SOMEONES BANK!!!"
-TextLabel_3.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_3.TextScaled = true
-TextLabel_3.TextSize = 14.000
-TextLabel_3.TextWrapped = true
-
-TextLabel_4.Parent = Frame
-TextLabel_4.BackgroundColor3 = Color3.fromRGB(94, 73, 200)
-TextLabel_4.Size = UDim2.new(0, 662, 0, 66)
-TextLabel_4.Font = Enum.Font.FredokaOne
-TextLabel_4.Text = " "
-TextLabel_4.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_4.TextScaled = true
-TextLabel_4.TextSize = 10.000
-TextLabel_4.TextWrapped = true
-TextLabel_4.TextYAlignment = Enum.TextYAlignment.Bottom
-
-UICorner_7.CornerRadius = UDim.new(0, 4)
-UICorner_7.Parent = TextLabel_4
-
-TextLabel_5.Parent = TextLabel_4
-TextLabel_5.BackgroundColor3 = Color3.fromRGB(94, 73, 200)
-TextLabel_5.Position = UDim2.new(0.0271903332, 0, 0, 0)
-TextLabel_5.Size = UDim2.new(0, 644, 0, 66)
-TextLabel_5.Font = Enum.Font.FredokaOne
-TextLabel_5.Text = "PSX-Pet-Unlocker"
-TextLabel_5.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_5.TextScaled = true
-TextLabel_5.TextSize = 10.000
-TextLabel_5.TextWrapped = true
-TextLabel_5.TextYAlignment = Enum.TextYAlignment.Bottom
-
-UICorner_8.CornerRadius = UDim.new(0, 4)
-UICorner_8.Parent = TextLabel_5
-
-ImageButton.Parent = TextLabel_4
-ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageButton.Position = UDim2.new(0.0151057402, 0, -0.00542750489, 0)
-ImageButton.Size = UDim2.new(0, 75, 0, 66)
-ImageButton.Image = "http://www.roblox.com/asset/?id=12355201329"
-
-UICorner_9.CornerRadius = UDim.new(0, 4)
-UICorner_9.Parent = ImageButton
-
--- Scripts:
-
-local function VBJFBTC_fake_script() -- UICorner_2. 
-	local script = Instance.new('Script', UICorner_2)
-
-	
+while true do
+    for _, petIcon in ipairs(inventory:GetDescendants()) do
+        if petIcon.Name == "PetIcon" then
+            petIcon.Image = customAssetId
+        end 
+    end
+    
+    for _, petIcon in ipairs(inventory:GetDescendants()) do
+        if petIcon.Name == "Level" and petIcon:IsA("TextLabel") then
+            petIcon.Text = "????"
+        end
+    end
+    
+    wait()
+end
